@@ -46,14 +46,14 @@
     <version>3.8.2</version>
 </plugin>
 <plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>2.2</version>
+    <groupId>org.apache.tomcat.maven</groupId>
+    <artifactId>tomcat7-maven-plugin</artifactId>
+    <version>2.2</version>
 				
-                 <configuration>
-					<url>http://18.216.253.224:8080/manager/text</url>
-					<server>tomcatdeploy</server>
-				</configuration>
+    <configuration>
+    <url>http://18.216.253.224:8080/manager/text</url>
+    <server>tomcatdeploy</server>
+    </configuration>
 			
      </plugin> 
   </plugins>
