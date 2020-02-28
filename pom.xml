@@ -51,7 +51,7 @@
     <version>2.2</version>
 				
     <configuration>
-    <url>http://18.216.253.224:8080/manager/text</url>
+    <url>http://3.19.123.252:8080/manager/text</url>
     <server>tomcatdeploy</server>
     </configuration>
 			
