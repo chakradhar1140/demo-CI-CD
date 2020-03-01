@@ -2,4 +2,4 @@
 
 this is a demo-CI/CD project.
 
-<img src="images/CI:CD.png">
+<img src="images/CICD.png">
