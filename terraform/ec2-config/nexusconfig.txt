@@ -1,0 +1,46 @@
+Configuring nexus repository(need t2.medium minimum requirement)
+
+Step1)
+
+sudo yum install java-1.8.0-openjdk -y
+***set permanent path for java
+JAVA_HOME= JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.242.b08-0.el7_7.x86_64
+
+PATH=$PATH:$JAVA_HOME:$HOME/bin
+
+export PATH
+
+step2) configuring nexus
+
+cd /opt
+wget https://sonatype-download.global.ssl.fastly.net/nexus/3/nexus-3.0.2-02-unix.tar.gz
+tar -zxvf 
+nexus-3.0.2-02-unix.tar.gz
+mv /opt/nexus-3.0.2-02 /opt/nexus
+
+sudo adduser nexus
+
+visudo
+change it like below
+## Allow root to run any commands anywhere
+root    ALL=(ALL)       ALL
+nexus   ALL=(ALL)       ALL
+
+
+passwd nexus
+nexus
+nexus
+
+sudo chown -R nexus:nexus /opt/nexus
+
+Open /opt/nexus/bin/nexus.rc file, uncomment run_as_user parameter and set it as following.
+vi /opt/nexus/bin/nexus.rc
+run_as_user="nexus" (file shold have only this line)
+
+Add nexus as a service at boot time
+sudo ln -s /opt/nexus/bin/nexus /etc/init.d/nexus
+
+
+Login as a nexus user and start service
+su - nexus
+service nexus start
