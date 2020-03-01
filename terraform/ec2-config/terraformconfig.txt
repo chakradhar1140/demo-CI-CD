@@ -1,0 +1,17 @@
+Terraform configuration
+
+Step 1
+provision one ec2 instance 
+Install and configure terraform on ec2
+1)yum update -y
+2)yum install java-1.8.0-openjdk
+3) yum install wget -y
+4) yum install unzip -y
+ *** mkdir terraform
+       Cd terraform
+5) wget https://releases.hashicorp.com/terraform/0.12.1/terraform_0.12.1_linux_amd64.zip
+6) unzip terraform_0.12.1_linux_amd64.zip
+7) echo $"export PATH=\$PATH:$(pwd)" >> ~/.bash_profile
+8) source ~/.bash_profile
+9) terraform -v
+
